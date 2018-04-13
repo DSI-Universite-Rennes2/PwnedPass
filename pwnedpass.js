@@ -123,6 +123,9 @@ var PwnedPass = (function () {
         setUserAgent: function (userAgent) {
             UserAgent = userAgent + "-via-" + GitHubSrc;
         },
+        setAPI: function(url) {
+            apiURL = url;
+        },
         check: function (password, callbacks) {
             cleanInput(password, callbacks).then(doCheck).catch(console.error);
         }
