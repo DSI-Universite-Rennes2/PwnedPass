@@ -268,6 +268,9 @@ var PwnedPass = (function () {
         setAPI: function(url) {
             apiURL = url;
         },
+        setRateLimit: function(rate) {
+            RateLimit = rate;
+        },
         check: function (password, callbacks) {
             cleanInput(password, callbacks).then(doCheck).catch(console.error);
         }

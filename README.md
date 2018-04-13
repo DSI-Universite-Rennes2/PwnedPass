@@ -34,10 +34,11 @@ If a plaintext password resembles an SHA-1 hash, then it wont be hashed automati
     });
 ```
 
-You can change API URL with your own
+You can change API URL with your own and set your own rate limit
 ```javascript
     // Use own local API of PwnedPassword database 
     PwnedPass.setAPI("https://pwnedpasswd.example.org/range/");
+    PwnedPass.setRateLimit(10); // ms
     PwnedPass.check(password, function(){
         console.log("this password was found in the haveibeenpwned password data");
     });
